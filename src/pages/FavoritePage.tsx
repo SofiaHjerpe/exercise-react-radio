@@ -1,8 +1,8 @@
 import React from 'react'
 
-type Props = {}
 
-const FavoritePage = (props: Props) => {
+
+const FavoritePage = () => {
   return (
     <div>FavoritePage</div>
   )
