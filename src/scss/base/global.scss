@@ -1,6 +1,6 @@
 @use "./src/scss/abstracts/colors.scss" as *;
 
-h1{
-    color: $light-black;
-    font-family: "Inter", sans-serif;
+
+#root {
+    background-color: $light-black;
 }

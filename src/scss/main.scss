@@ -2,3 +2,5 @@
 @use "./base/global.scss";
 //####abstracts####
 @use "./src/scss/abstracts/colors.scss" as *;
+//####components####
+@use "./src/components/channel";
