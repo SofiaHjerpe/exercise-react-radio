@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { IRoute } from "../interfaces";
 
 interface IHeaderProps {
@@ -7,9 +7,9 @@ interface IHeaderProps {
 
 export const Header = ({ links }: IHeaderProps) => {
   return links.map((link) => (
-    <NavLink key={link.id} className="link" to={link.path}>
+    <Link key={link.id} className="link" to={link.path}>
       {link.name}
-    </NavLink>
+    </Link>
   ));
 };
 

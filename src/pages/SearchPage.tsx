@@ -1,8 +1,8 @@
 import React from 'react'
 
+type Props = {}
 
-
-const SearchPage = () => {
+const SearchPage = (props: Props) => {
   return (
     <div>SearchPage</div>
   )
