@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { IChannel } from "../interfaces";
 
 interface ISingleChannelProps {
@@ -6,21 +6,17 @@ interface ISingleChannelProps {
 }
 
 export function SingleChannel({ channel }: ISingleChannelProps) {
-  const navigate = useNavigate();
-
-  function handleOnClick() {
-    navigate("/programs");
-  }
   return (
     <>
-      <div  className="channel">
+      <div className="channel">
         <p>{channel.siteurl}</p>
-      
+
         <div className="channel-image-container">
           <img className="image" src={channel.image} alt="" />
           <img className="image" src={channel.imagetemplate} alt="img" />
         </div>
-        <a onClick={handleOnClick}>programs</a>
+        <Link to={`/programs/${channel.liveaudio.id}`}>To programs</Link>
+
         <p className="text">{channel.tagline}</p>
       </div>
     </>

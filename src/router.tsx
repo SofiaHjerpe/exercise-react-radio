@@ -16,7 +16,7 @@ import { ProgramPage } from "./pages/ProgramPage";
            <Route element={<ChannelsPage />} index />
            <Route path="/search" element={<SearchPage />} />
            <Route path="/favorites" element={<FavoritePage />} />
-           <Route path="/programs" element={<ProgramPage />} />
+           <Route path="/programs/:id" element={<ProgramPage />} />
          </Route>
        </Route>
      )
