@@ -18,17 +18,31 @@ export interface IChannel {
   liveaudio: { id: number };
 }
 
+export interface IProgramData {
+  id: number;
+  programs: IProgram[];
+}
+
 export interface IProgram {
   id: number;
-  title: string;
   description: string;
   broadcastinfo: string;
-  programurl: string;
   email: string;
   phone: string;
+  programurl: string;
+  programslug: string;
   programimage: string;
+  programimagetemplate: string;
+  programimagewide: string;
+  programimagetemplatewide: string;
   socialimage: string;
   socialimagetemplate: string;
+  socialmediaplatforms: IPlatforms;
+}
+interface IPlatforms {
+  id: number;
+  platform: string;
+  platformurl: string;
 }
 interface IPagination {
   // ..attribut här

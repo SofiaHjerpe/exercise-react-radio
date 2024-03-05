@@ -1,5 +1,6 @@
 import React from 'react'
 import { IProgram } from '../interfaces';
+import SingleProgram from './SingleProgram';
 
 interface IProgramProps {
   programs: IProgram[];
@@ -7,7 +8,13 @@ interface IProgramProps {
 
 const Program = ({programs}: IProgramProps) => {
   return (
-    <div></div>
+    <div className="programs">
+        {programs.map((program) => 
+           <SingleProgram key={program.id} program={program} />
+        )}
+
+
+    </div>
   )
 }
 
