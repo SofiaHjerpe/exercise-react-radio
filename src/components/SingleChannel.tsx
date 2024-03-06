@@ -3,11 +3,13 @@ import { IChannel } from "../interfaces";
 
 interface ISingleChannelProps {
   channel: IChannel;
+
 }
 
 export function SingleChannel({ channel }: ISingleChannelProps) {
   return (
     <>
+    
       <div className="card">
         <p>{channel.siteurl}</p>
 

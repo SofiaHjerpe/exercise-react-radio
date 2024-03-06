@@ -38,12 +38,29 @@ export interface IProgram {
   socialimage: string;
   socialimagetemplate: string;
   socialmediaplatforms: IPlatforms;
+  programcategory: IProgramCategory[];
+}
+export interface IScheduleData {
+  id: number;
+  schedule: ISchedule[];
+}
+export interface ISchedule {
+  id: number;
+  title: string;
+  description: string;
+  imageurltemplate: string;
+}
+export interface IProgramCategory {
+  id: number; 
+  name: string;
+
 }
 interface IPlatforms {
   id: number;
   platform: string;
   platformurl: string;
 }
+
 interface IPagination {
   // ..attribut här
 }
