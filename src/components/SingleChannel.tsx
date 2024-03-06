@@ -8,7 +8,7 @@ interface ISingleChannelProps {
 export function SingleChannel({ channel }: ISingleChannelProps) {
   return (
     <>
-      <div className="channel">
+      <div className="card">
         <p>{channel.siteurl}</p>
 
         <div className="channel-image-container">

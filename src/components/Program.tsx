@@ -8,14 +8,26 @@ interface IProgramProps {
 
 const Program = ({programs}: IProgramProps) => {
   return (
-    <div className="programs">
-        {programs.map((program) => 
-           <SingleProgram key={program.id} program={program} />
-        )}
-
-
-    </div>
-  )
+    <>
+      <section className="channelsAndPrograms">
+        <div className="channelsAndPrograms-row">
+          {programs.map((program, index) =>
+            index < 3 ? <SingleProgram program={program} key={program.id} /> : null
+          )}
+        </div>
+        <div className="channelsAndPrograms-row">
+          {programs.map((program, index) =>
+            index < 7 && index > 3 ? <SingleProgram program={program} key={program.id} /> : null
+          )}
+        </div>
+        <div className="channelsAndPrograms-row">
+          {programs.map((program, index) =>
+            index < 10 && index > 7 ? <SingleProgram program={program} key={program.id} /> : null
+          )}
+        </div>
+      </section>
+    </>
+  );
 }
 
 export default Program

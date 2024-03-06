@@ -6,15 +6,16 @@ interface ISingleProgramProps {
 }
 
 const SingleProgram = ({ program }: ISingleProgramProps) => {
+  const daysInWeek = ["Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag", "Söndag"];
+  const dayOfToday = new Date().getDay();
+  console.log(dayOfToday)
   return (
-    <div>
-        
+    <div className="card">
       <p>{program.description}</p>
       <p>{program.broadcastinfo}</p>
       <p>Contact</p>
       <p>{program.email}</p>
       <p>{program.phone}</p>
-      <img width={200} src={program.programimage} alt="img" />
       <img width={400} src={program.programimagetemplate} alt="img" />
     </div>
   );

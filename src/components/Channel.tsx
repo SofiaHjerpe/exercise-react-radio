@@ -7,26 +7,27 @@ interface IChannelProps {
 }
 
 export function Channel({ channels }: IChannelProps): ReactElement {
-  const channelsFirstRow = channels.slice(0, 3);
-  const channelsSecondRow = channels.slice(3, 6);
-  const channelsThirdRow = channels.slice(6, 9);
   return (
     <>
-      <section className="channels">
-        <div className="channels-row">
-          {channelsFirstRow.map((channel) => (
-            <SingleChannel channel={channel} key={channel.id} />
-          ))}
+      <section className="channelsAndPrograms">
+        <div className="channelsAndPrograms-row">
+          {channels.map((channel, index) =>
+            index < 3 ? <SingleChannel channel={channel}  key={channel.id} /> : null
+          )}
         </div>
-        <div className="channels-row">
-          {channelsSecondRow.map((channel) => (
-            <SingleChannel channel={channel} key={channel.id} />
-          ))}
+        <div className="channelsAndPrograms-row">
+          {channels.map((channel, index) =>
+            index < 7 && index > 3 ? (
+              <SingleChannel channel={channel}  key={channel.id} />
+            ) : null
+          )}
         </div>
-        <div className="channels-row">
-          {channelsThirdRow.map((channel) => (
-            <SingleChannel channel={channel} key={channel.id} />
-          ))}
+        <div className="channelsAndPrograms-row">
+          {channels.map((channel, index) =>
+            index < 10 && index > 6 ? (
+              <SingleChannel channel={channel}  key={channel.id} />
+            ) : null
+          )}
         </div>
       </section>
     </>
