@@ -23,14 +23,10 @@ const Program = ({ programs }: IProgramProps) => {
         </div>
         <div className="channelsAndPrograms-row">
           {programs.map((program, index) =>
-            index <= 9 && index >= 7 ? <SingleProgram program={program} key={program.id} /> : null
+            index <= 10 && index >= 7 ? <SingleProgram program={program} key={program.id} /> : null
           )}
         </div>
-        <div className="channelsAndPrograms-row">
-          {programs.map((program, index) =>
-            index > 10 && index <= 12 ? <SingleProgram program={program} key={program.id} /> : null
-          )}
-        </div>
+        
       </section>
     </>
   );

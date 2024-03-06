@@ -1,6 +1,9 @@
 @use "./src/scss/abstracts/colors.scss" as *;
 
-
+*{
+    padding: 0;
+    margin: 0;
+}
 #root {
     background-color: $light-black;
 }

@@ -6,11 +6,17 @@ interface IHeaderProps {
 }
 
 export const Header = ({ links }: IHeaderProps) => {
-  return links.map((link) => (
-    <Link key={link.id} className="link" to={link.path}>
-      {link.name}
-    </Link>
-  ));
+  return (
+    <>
+      <header>
+        {links.map((link) => (
+          <Link key={link.id} className="link" to={link.path}>
+            {link.name}
+          </Link>
+        ))}
+      </header>
+    </>
+  );
 };
 
 export default Header;

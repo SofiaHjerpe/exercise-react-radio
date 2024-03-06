@@ -1,0 +1,23 @@
+header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 3em;
+  gap: 0.5rem;
+  margin-inline: 2rem;
+}
+.link {
+  display: flex;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+}
+.link:hover {
+    color: #31a1bd;
+    margin-bottom: 5px;
+}
+
+.link:active {
+    color: #ff5a00
+}

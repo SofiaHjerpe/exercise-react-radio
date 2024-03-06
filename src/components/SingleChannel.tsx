@@ -17,7 +17,7 @@ export function SingleChannel({ channel }: ISingleChannelProps) {
           <img className="image" src={channel.image} alt="" />
           <img className="image" src={channel.imagetemplate} alt="img" />
         </div>
-        <Link to={`/programs/${channel.liveaudio.id}`}>To programs</Link>
+        <Link className="link" to={`/programs/${channel.liveaudio.id}`}>Programs</Link>
 
         <p className="text">{channel.tagline}</p>
       </div>
