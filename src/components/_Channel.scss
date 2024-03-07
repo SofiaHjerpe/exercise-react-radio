@@ -2,12 +2,15 @@
 
 /*link styling*/
 /*overflow ellipse on text*/
-
+.left {
+  justify-content: flex-start;
+}
 .heading {
   display: flex;
   justify-content: center;
   color: $white;
   font-family: "Inter", sans-serif;
+  font-size: 30px;
 }
 .channelsAndPrograms {
   display: flex;
@@ -20,10 +23,10 @@
 .channelsAndPrograms-row {
   display: flex;
   gap: 20px;
-  overflow-x: hidden;
+  overflow: hidden;
   justify-content: center;
   align-items: center;
-  margin-inline: 40px;
+
 }
 
 /*channel /program container*/

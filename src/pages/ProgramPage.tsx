@@ -23,7 +23,7 @@ export const ProgramPage = () => {
     fetchPrograms();
   }, []);
 
-  return <Program programs={programsBefore} />;
+  return <Program channelid={id} programs={programsBefore} />;
 };
 
 export default ProgramPage;

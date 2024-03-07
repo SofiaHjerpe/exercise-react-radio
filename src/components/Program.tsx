@@ -10,7 +10,7 @@ export const Program = ({ program, details }: IProgramProps) => {
   if (details === false) {
     return (
       <div className="card">
-        <h4>{program.programslug}</h4>
+       <h4>{program.programslug}</h4> 
         <p>{program.description}</p>
         <p>Contact</p>
         <p>{program.email}</p>

@@ -6,6 +6,7 @@ import FavoritePage from "./pages/FavoritePage";
 import App from "./App";
 import { ProgramPage } from "./pages/ProgramPage";
 import { SingleProgramPage } from "./pages/SingleProgramPage";
+import { SortedPage } from "./pages/SortedPage";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -16,6 +17,7 @@ export const router = createBrowserRouter(
         <Route path="/favorites" element={<FavoritePage />} />
         <Route path="/programs/programsInChannel/:id" element={<ProgramPage />} />
         <Route path="/programs/:programid" element={<SingleProgramPage />} />
+        <Route path="/programs/:channelid&:categoryid" element={<SortedPage />} />
       </Route>
     </Route>
   )

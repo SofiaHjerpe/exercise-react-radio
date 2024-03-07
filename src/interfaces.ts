@@ -23,6 +23,25 @@ export interface IProgramData {
   programs: IProgram[];
 }
 
+export interface ICategorizedData {
+  id: number;
+  programs: IProgram[];
+}
+export interface ISortedProgram {
+  id: number;
+  description: string;
+  broadcastinfo: string;
+  email: string;
+  phone: string;
+  programurl: string;
+  programslug: string;
+  programimage: string;
+  programimagetemplate: string;
+  programimagewide: string;
+  programimagetemplatewide: string;
+  socialimage: string;
+  socialimagetemplate: string;
+}
 export interface IProgram {
   id: number;
   description: string;

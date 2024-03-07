@@ -9,7 +9,6 @@ export function SingleChannel({ channel }: ISingleChannelProps) {
   return (
     <>
       <div className="card">
-        <p>{channel.siteurl}</p>
 
         <div className="channel-image-container">
           <img className="image" src={channel.image} alt="" />

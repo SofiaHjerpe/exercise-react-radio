@@ -5,16 +5,17 @@ import { Categories } from "./Categories";
 
 interface IProgramsProps {
   programs: IProgram[];
+  channelid: string | undefined;
 
 }
 
-const Programs = ({ programs }: IProgramsProps) => {
+const Programs = ({ programs, channelid }: IProgramsProps) => {
   return (
     <>
       <div className="programs">
         <div className="sortArea">
           <h1 className="heading left">Categories</h1>
-         <Categories />
+         <Categories channelid={channelid} />
         </div>
 
         <section className="channelsAndPrograms">
