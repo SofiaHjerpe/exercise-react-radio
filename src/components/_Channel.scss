@@ -30,27 +30,21 @@
 .card {
   background-color: $white;
   padding: 16px 32px;
-    height: 15em;
-    width: 20em;
+  height: 15em;
+  width: 20em;
   border-radius: 4px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   margin-top: 40px;
   align-items: center;
+
 }
 
 .image:nth-of-type(1) {
   display: flex;
   z-index: -1;
-  width: 15em;
-  height: 15em;
+  width: 5em;
+  height: 5em;
 }
 .text {
   max-width: 15em;
-}
-.image:nth-of-type(2) {
-  display: flex;
-  z-index: 9999;
-
-  width: 5em;
-  height: 5em;
-  margin-top: -5em;
 }

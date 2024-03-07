@@ -1,46 +1,39 @@
-import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { IProgram } from "../interfaces";
-import SingleProgram from "./SingleProgram";
-import { Categories } from "./Categories";
 
 interface IProgramProps {
-  programs: IProgram[];
+  program: IProgram;
+  details: Boolean;
 }
 
-const Program = ({ programs }: IProgramProps) => {
-  return (
-    <>
-      <div className="programs">
-        <div>
-          <Categories />
-        </div>
-
-        <section className="channelsAndPrograms">
-          <h1 className="heading">All programs</h1>
-          <div className="channelsAndPrograms-row">
-            {programs.map((program, index) =>
-              index < 3 ? <SingleProgram program={program} key={program.id} /> : null
-            )}
-          </div>
-          <div className="channelsAndPrograms-row">
-            {programs.map((program, index) =>
-              index < 7 && index >= 4 ? <SingleProgram program={program} key={program.id} /> : null
-            )}
-          </div>
-          <div className="channelsAndPrograms-row">
-            {programs.map((program, index) =>
-              index < 10 && index >= 7 ? <SingleProgram program={program} key={program.id} /> : null
-            )}
-          </div>
-          <div className="channelsAndPrograms-row">
-            {programs.map((program, index) =>
-              index >= 10 ? <SingleProgram program={program} key={program.id} /> : null
-            )}
-          </div>
-        </section>
+export const Program = ({ program, details }: IProgramProps) => {
+  if (details === false) {
+    return (
+      <div className="card">
+        <h4>{program.programslug}</h4>
+        <p>{program.description}</p>
+        <p>Contact</p>
+        <p>{program.email}</p>
+        <p>{program.phone}</p>
+        <Link className="link" to={`/programs/${program.id}`}>
+          see more
+        </Link>
+        <img width={200} height={110} src={program.programimagetemplate} alt="img" />
       </div>
-    </>
-  );
-};
+    );
+  } else {
+    return (
+      <div className="bigCard">
+        <h1>{program.programslug}</h1>
+        <p>{program.description}</p>
+        <p>{program.broadcastinfo}</p>
+        <p>Contact</p>
+        <p>{program.email}</p>
+        <p>{program.phone}</p>
 
-export default Program;
+        <img width={400} src={program.socialimage} alt="img" />
+       
+      </div>
+    );
+  }
+};

@@ -3,21 +3,20 @@ import { IChannel } from "../interfaces";
 
 interface ISingleChannelProps {
   channel: IChannel;
-
 }
 
 export function SingleChannel({ channel }: ISingleChannelProps) {
   return (
     <>
-    
       <div className="card">
         <p>{channel.siteurl}</p>
 
         <div className="channel-image-container">
           <img className="image" src={channel.image} alt="" />
-          <img className="image" src={channel.imagetemplate} alt="img" />
         </div>
-        <Link className="link" to={`/programs/${channel.liveaudio.id}`}>Programs</Link>
+        <Link className="link" to={`/programs/programsInChannel/${channel.liveaudio.id}`}>
+          Programs
+        </Link>
 
         <p className="text">{channel.tagline}</p>
       </div>

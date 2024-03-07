@@ -37,8 +37,10 @@ export interface IProgram {
   programimagetemplatewide: string;
   socialimage: string;
   socialimagetemplate: string;
-  socialmediaplatforms: IPlatforms;
-  programcategory: IProgramCategory;
+}
+export interface ISingleProgramData {
+  id: number;
+  program: IProgram;
 }
 export interface IScheduleData {
   id: number;
@@ -51,14 +53,12 @@ export interface ISchedule {
   imageurltemplate: string;
 }
 export interface IProgramCategory {
-  id: number; 
-  name: string;
-
-}
-interface IPlatforms {
   id: number;
-  platform: string;
-  platformurl: string;
+  programcategories: ICategory[];
+}
+export interface ICategory {
+  id: number;
+  name: string;
 }
 
 interface IPagination {

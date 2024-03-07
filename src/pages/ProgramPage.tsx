@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import Program from "../components/Program";
+import Program from "../components/Programs";
 import { IProgram, IProgramData } from "../interfaces";
 
 export const ProgramPage = () => {
   const { id } = useParams();
+  const baseUrl = "https://api.sr.se/api/v2/";
   const [programsBefore, setPrograms] = useState<IProgram[]>([]);
 
   const fetchPrograms = async () => {
     const response = await fetch(
-      `http://api.sr.se/api/v2/programs/index?channelid=${id}&format=json&indent=true`
+      `${baseUrl}programs/index?channelid=${id}&format=json&indent=true`
     );
     const programObject: IProgramData = await response.json();
 
