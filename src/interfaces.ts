@@ -38,7 +38,7 @@ export interface IProgram {
   socialimage: string;
   socialimagetemplate: string;
   socialmediaplatforms: IPlatforms;
-  programcategory: IProgramCategory[];
+  programcategory: IProgramCategory;
 }
 export interface IScheduleData {
   id: number;

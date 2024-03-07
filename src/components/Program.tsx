@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { IProgram } from "../interfaces";
 import SingleProgram from "./SingleProgram";
+import { Categories } from "./Categories";
 
 interface IProgramProps {
   programs: IProgram[];
@@ -9,25 +10,35 @@ interface IProgramProps {
 const Program = ({ programs }: IProgramProps) => {
   return (
     <>
-      <h1 className="heading">All programs</h1>
-      <section className="channelsAndPrograms">
-        <div className="channelsAndPrograms-row">
-          {programs.map((program, index) =>
-            index < 3 ? <SingleProgram program={program} key={program.id} /> : null
-          )}
+      <div className="programs">
+        <div>
+          <Categories />
         </div>
-        <div className="channelsAndPrograms-row">
-          {programs.map((program, index) =>
-            index <= 6 && index > 3 ? <SingleProgram program={program} key={program.id} /> : null
-          )}
-        </div>
-        <div className="channelsAndPrograms-row">
-          {programs.map((program, index) =>
-            index <= 10 && index >= 7 ? <SingleProgram program={program} key={program.id} /> : null
-          )}
-        </div>
-        
-      </section>
+
+        <section className="channelsAndPrograms">
+          <h1 className="heading">All programs</h1>
+          <div className="channelsAndPrograms-row">
+            {programs.map((program, index) =>
+              index < 3 ? <SingleProgram program={program} key={program.id} /> : null
+            )}
+          </div>
+          <div className="channelsAndPrograms-row">
+            {programs.map((program, index) =>
+              index < 7 && index >= 4 ? <SingleProgram program={program} key={program.id} /> : null
+            )}
+          </div>
+          <div className="channelsAndPrograms-row">
+            {programs.map((program, index) =>
+              index < 10 && index >= 7 ? <SingleProgram program={program} key={program.id} /> : null
+            )}
+          </div>
+          <div className="channelsAndPrograms-row">
+            {programs.map((program, index) =>
+              index >= 10 ? <SingleProgram program={program} key={program.id} /> : null
+            )}
+          </div>
+        </section>
+      </div>
     </>
   );
 };

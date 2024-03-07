@@ -12,7 +12,8 @@
 .channelsAndPrograms {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 30px;
+
   align-items: center;
   justify-content: center;
 }
@@ -24,13 +25,13 @@
   align-items: center;
   margin-inline: 40px;
 }
-.heading {
-  color: #fff;
-}
+
 /*channel /program container*/
 .card {
   background-color: $white;
   padding: 16px 32px;
+    height: 15em;
+    width: 20em;
   border-radius: 4px;
   margin-top: 40px;
   align-items: center;

@@ -15,7 +15,7 @@ const SingleProgram = ({ program,}: ISingleProgramProps) => {
       <p>Contact</p>
       <p>{program.email}</p>
       <p>{program.phone}</p>
-      <img width={400} src={program.programimagetemplate} alt="img" />
+      <img width={200} height={110} src={program.programimagetemplate} alt="img" />
     </div>
   );
 };
